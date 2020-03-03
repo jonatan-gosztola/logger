@@ -2,18 +2,25 @@
     "name": "csoni-logger",
     "version": "1.0.0",
     "description": "Logger for node apps",
-    "main": "logger.js",
+    "main": "lib/logger.js",
+    "types": "lib/logger.d.ts",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
         "build": "tsc",
-        "lint": "tslint -p tsconfig.json"
+        "lint": "tslint -p tsconfig.json",
+        "prepare": "npm run build",
+        "prepublishOnly": "npm run lint",
+        "preversion": "npm run lint",
+        "version": "git add -A src",
+        "postversion": "git push && git push --tags"
     },
     "repository": {
         "type": "git",
         "url": "git+https://github.com/jonatan-gosztola/logger.git"
     },
     "homepage": "https://github.com/jonatan-gosztola/logger#readme",
-    "author": "",
+    "author": "Jonatan Gosztola",
+    "files": ["lib/**/*"],
     "license": "ISC",
     "devDependencies": {
         "@types/node": "^13.7.7",
@@ -25,5 +32,6 @@
     },
     "dependencies": {
         "@types/dateformat": "^3.0.1"
-    }
+    },
+    "keywords": [ "node-logger", "logger", "static-logger", "static logger" ]
 }
