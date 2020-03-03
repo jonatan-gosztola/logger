@@ -1,0 +1,26 @@
+{
+  "name": "csoni-logger",
+  "version": "1.0.0",
+  "description": "Logger for node apps",
+  "main": "logger.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc",
+    "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
+    "lint": "tslint -p tsconfig.json"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^13.7.7",
+    "chalk": "^3.0.0",
+    "dateformat": "^3.0.3",
+    "prettier": "^1.19.1",
+    "tslint": "^6.0.0",
+    "tslint-config-prettier": "^1.18.0",
+    "typescript": "^3.8.3"
+  },
+  "dependencies": {
+    "@types/dateformat": "^3.0.1"
+  }
+}
